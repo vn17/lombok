@@ -37,7 +37,7 @@ import javax.swing.UIManager;
 import lombok.Lombok;
 import lombok.core.LombokApp;
 import lombok.core.SpiLoadUtil;
-import lombok.core.Version;
+import lombok.core.Versions;
 import lombok.installer.OsUtils.OS;
 import lombok.patcher.ClassRootFinder;
 import lombok.spi.Provides;
@@ -299,6 +299,6 @@ public class Installer {
 				"If you are just using 'javac' or a tool that calls on javac, no installation is neccessary; just " +
 				"make sure lombok.jar is in the classpath when you compile. Example:\n\n" +
 				"   java -cp lombok.jar MyCode.java\n",
-				Version.getVersion(), ABOUT_LOMBOK_URL);
+				Versions.getVersion(), ABOUT_LOMBOK_URL);
 	}
 }

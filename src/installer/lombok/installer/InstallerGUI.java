@@ -71,7 +71,7 @@ import javax.swing.UIManager;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.text.html.HTMLDocument;
 
-import lombok.core.Version;
+import lombok.core.Versions;
 import lombok.installer.OsUtils.OS;
 
 /**
@@ -106,7 +106,7 @@ public class InstallerGUI {
 	 * Call the {@link #show()} method on a freshly created installer to render it.
 	 */
 	public InstallerGUI() {
-		appWindow = new JFrame(String.format("Project Lombok v%s - Installer", Version.getVersion()));
+		appWindow = new JFrame(String.format("Project Lombok v%s - Installer", Versions.getVersion()));
 		
 		appWindow.setLocationByPlatform(true);
 		appWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -824,7 +824,7 @@ public class InstallerGUI {
 		buttonBar.add(Box.createRigidArea(new Dimension(16, 1)));
 		
 		JLabel versionLabel = new JLabel();
-		versionLabel.setText("v" + Version.getVersion());
+		versionLabel.setText("v" + Versions.getVersion());
 
 		buttonBar.add(versionLabel);
 		buttonBar.add(Box.createRigidArea(new Dimension(16, 1)));

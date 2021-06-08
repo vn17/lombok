@@ -29,7 +29,7 @@ import java.util.Date;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import lombok.core.Version;
+import lombok.core.Versions;
 
 /**
  * We make a number of assumptions in lombok code, and if these assumptions fail, we try to fall back to a 'least bad' scenario. However, we would prefer to
@@ -80,9 +80,9 @@ public class AssertionLogger {
 		
 		String version;
 		try {
-			version = Version.getFullVersion();
+			version = Versions.getFullVersion();
 		} catch (Exception e) {
-			version = Version.getVersion();
+			version = Versions.getVersion();
 		}
 		
 		logToFile(String.format("{%s} [%s -- START %s]\n", PROCESS_ID, new Date(), version));

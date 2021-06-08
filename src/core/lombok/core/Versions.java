@@ -26,7 +26,7 @@ import java.io.InputStream;
 /**
  * This class just holds lombok's current version.
  */
-public class Version {
+public class Versions {
 	// ** CAREFUL ** - this class must always compile with 0 dependencies (it must not refer to any other sources or libraries).
 	// Note: In 'X.Y.Z', if Z is odd, its a snapshot build built from the repository, so many different 0.10.3 versions can exist, for example.
 	// Official builds always end in an even number. (Since 0.10.2).
@@ -41,7 +41,7 @@ public class Version {
 	//   Dancing Elephant
 	//   Envious Ferret
 	
-	private Version() {
+	private Versions() {
 		//Prevent instantiation
 	}
 	
@@ -78,7 +78,7 @@ public class Version {
 		String version = String.format("v%s \"%s\"", VERSION, RELEASE_NAME);
 		if (!isEdgeRelease()) return version;
 		
-		InputStream in = Version.class.getResourceAsStream("/release-timestamp.txt");
+		InputStream in = Versions.class.getResourceAsStream("/release-timestamp.txt");
 		if (in == null) return version;
 		try {
 			byte[] data = new byte[65536];

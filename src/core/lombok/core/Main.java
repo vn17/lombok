@@ -61,7 +61,7 @@ public class Main {
 		}
 		
 		@Override public int runApp(List<String> args) {
-			System.out.println(Version.getFullVersion());
+			System.out.println(Versions.getFullVersion());
 			return 0;
 		}
 	}
@@ -144,7 +144,7 @@ public class Main {
 			out.println(message);
 			out.println("------------------------------");
 		}
-		out.println("projectlombok.org " + Version.getFullVersion());
+		out.println("projectlombok.org " + Versions.getFullVersion());
 		out.println("Copyright (C) 2009-2021 The Project Lombok Authors.");
 		out.println("Run 'lombok license' to see the lombok license agreement.");
 		out.println();

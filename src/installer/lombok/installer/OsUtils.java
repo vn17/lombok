@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import lombok.core.Version;
+import lombok.core.Versions;
 
 /**
  * Implement and provide this class to add auto-finding a certain brand of IDEs to the lombok installer.
@@ -44,7 +44,7 @@ public final class OsUtils {
 	private static void loadWindowsDriveInfoLib() throws IOException {
 		if (!windowsDriveInfoLibLoaded.compareAndSet(false, true)) return;
 		
-		final String prefix = "lombok-" + Version.getVersion() + "-";
+		final String prefix = "lombok-" + Versions.getVersion() + "-";
 		
 		File temp = File.createTempFile("lombok", ".mark");
 		File dll1 = new File(temp.getParentFile(), prefix + "WindowsDriveInfo-i386.dll");

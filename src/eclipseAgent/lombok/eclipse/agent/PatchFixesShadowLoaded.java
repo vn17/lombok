@@ -27,13 +27,13 @@ import java.io.OutputStream;
 
 import lombok.core.DiagnosticsReceiver;
 import lombok.core.PostCompiler;
-import lombok.core.Version;
+import lombok.core.Versions;
 
 public class PatchFixesShadowLoaded {
 	public static String addLombokNotesToEclipseAboutDialog(String origReturnValue, String key) {
 		if ("aboutText".equals(key)) {
 			if (origReturnValue.contains(" is installed. https://projectlombok.org")) return origReturnValue;
-			return origReturnValue + "\n\nLombok " + Version.getFullVersion() + " is installed. https://projectlombok.org/";
+			return origReturnValue + "\n\nLombok " + Versions.getFullVersion() + " is installed. https://projectlombok.org/";
 		}
 		return origReturnValue;
 	}
